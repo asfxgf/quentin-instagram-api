@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :restaurants
+  has_many :candidates
   has_many :comments
 
   # Include default devise modules. Others available are:

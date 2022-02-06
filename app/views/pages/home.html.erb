@@ -1,12 +1,12 @@
 <% if user_signed_in? %>
 	<h1>API_KEY : <%= current_user.authentication_token %></h1>
 	<% x = 0 %>
-	<% for restaurant in Restaurant.all do %>
-		<% if restaurant.user.id == current_user.id %>
+	<% for candidate in Candidate.all do %>
+		<% if candidate.user.id == current_user.id %>
 			<% x = x + 1 %>
 		<% end %>
 	<% end %>	
-	<h1>Vous possédez <%= x %> restaurant(s).</h1>
+	<h1>Vous possédez <%= x %> candidat(s).</h1>
 	<table class="table table-bordered">
 		<thead>
 	    	<tr>
@@ -16,14 +16,14 @@
 	    	</tr>
 	  	</thead>
 		<tbody>
-			<% for restaurant in Restaurant.all do %>
-				<% if restaurant.user.id == current_user.id %>
+			<% for candidate in Candidate.all do %>
+				<% if candidate.user.id == current_user.id %>
 					<tr>
-		    			<th scope="row"><%= restaurant.id %></th>
-		   		 		<th scope="row"><%= restaurant.name %></th>
-		   		 		<th scope="row"><%= restaurant.address %></th>
+		    			<th scope="row"><%= candidate.id %></th>
+		   		 		<th scope="row"><%= candidate.name %></th>
+		   		 		<th scope="row"><%= candidate.address %></th>
 		   		 		<th>
-		   		 			<%= link_to "Détails", restaurant_path(restaurant.id), class: "btn btn-success" %>
+		   		 			<%= link_to "Détails", candidate_path(candidate.id), class: "btn btn-success" %>
 		   		 		</th>
 		   		 	</tr>
 		   		 <% end %>

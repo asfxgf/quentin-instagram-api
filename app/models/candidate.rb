@@ -1,4 +1,4 @@
-class Restaurant < ApplicationRecord
+class Candidate < ApplicationRecord
   belongs_to :user
   has_many :comments
 

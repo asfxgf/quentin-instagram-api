@@ -1,4 +1,4 @@
-class RestaurantPolicy < ApplicationPolicy
+class CandidatePolicy < ApplicationPolicy
   def update?
     user == record.user
   end
