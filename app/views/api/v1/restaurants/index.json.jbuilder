@@ -1,3 +1,5 @@
 json.array! @restaurants do |restaurant|
-  json.extract! restaurant, :id, :name, :address
+	if restaurant.user_id == current_user.id then
+  		json.extract! restaurant, :id, :name, :address
+  	end
 end
