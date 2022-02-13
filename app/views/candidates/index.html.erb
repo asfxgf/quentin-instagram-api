@@ -11,8 +11,9 @@
 			<% if candidate.user_id == current_user.id %>
 				<tr>
 					<th scope="row"><%= candidate.id %></th>
-				 	<th scope="row"><%= candidate.name %></th>
-				 	<th scope="row"><%= candidate.address %></th>
+				 	<th scope="row"><%= candidate.character %></th>
+				 	<th scope="row"><%= candidate.culture %></th>
+				 	<th scope="row"><%= candidate.picture_url %></th>
 				 	<th><%= link_to "Détails", candidate_path(candidate.id), class: "btn btn-success" %></th>
 		 		</tr>
 			<% end %>

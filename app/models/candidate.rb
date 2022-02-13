@@ -2,5 +2,5 @@ class Candidate < ApplicationRecord
   belongs_to :user
   has_many :comments
 
-  validates :name, presence: true
+  validates :character, presence: true
 end

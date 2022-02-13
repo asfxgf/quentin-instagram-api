@@ -11,8 +11,9 @@
 		<thead>
 	    	<tr>
 	      		<th scope="col">ID</th>
-	      		<th scope="col">Name</th>
-	      		<th scope="col">Address</th>
+	      		<th scope="col">Character</th>
+	      		<th scope="col">Culture</th>
+	      		<th scope="col">Picture_url</th>
 	    	</tr>
 	  	</thead>
 		<tbody>
@@ -20,8 +21,9 @@
 				<% if candidate.user.id == current_user.id %>
 					<tr>
 		    			<th scope="row"><%= candidate.id %></th>
-		   		 		<th scope="row"><%= candidate.name %></th>
-		   		 		<th scope="row"><%= candidate.address %></th>
+		   		 		<th scope="row"><%= candidate.character %></th>
+		   		 		<th scope="row"><%= candidate.culture %></th>
+		   		 		<th scope="row"><%= candidate.picture_url %></th>
 		   		 		<th>
 		   		 			<%= link_to "Détails", candidate_path(candidate.id), class: "btn btn-success" %>
 		   		 		</th>
@@ -31,7 +33,7 @@
 	 	</tbody>
 	</table>
 <% else %>
-	<h2>Bienvenue sur AutoHunt</h2>
+	<h2>Bienvenue sur mon l'API, tu peux créer des "candidates" qui possèdent 2 strings</h2>
 	<h2>Pour accéder à ton espace perso, il faut te connecter</h2>
 	<%= link_to "Je me connecte", new_user_session_path, class: "btn btn-primary" %>
 <% end %>

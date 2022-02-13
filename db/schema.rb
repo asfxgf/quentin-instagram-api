@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 2020_08_25_074423) do
   enable_extension "plpgsql"
 
   create_table "candidates", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
+    t.string "character"
+    t.string "culture"
+    t.string "picture_url"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

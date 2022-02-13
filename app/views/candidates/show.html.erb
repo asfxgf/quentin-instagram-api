@@ -1,5 +1,6 @@
-<h1>Voici les informations précises du candidate "<%= @candidate.name %>".</h1>
-<h2>Il est situé : <%=  @candidate.address %>.</h2>
+<h1>Character : "<%= @candidate.character %>".</h1>
+<h2>Culture : <%=  @candidate.culture %>.</h2>
+<h2>Picture URL : <%=  @candidate.picture_url %>.</h2>
 <h2>C'est le : <%= @candidate.id %> ème candidat a avoir été créée.</h2>
 <% if @candidate.user_id == current_user.id %>
 	<h3>Ce candidat vous appartient, vous l'avez crée le "<%= @candidate.created_at.strftime("%d:%m:%Y") %>"</h3>

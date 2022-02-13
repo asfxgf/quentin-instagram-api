@@ -44,7 +44,7 @@ class Api::V1::CandidatesController < Api::V1::BaseController
   end
 
   def candidate_params
-    params.require(:candidate).permit(:name, :address)
+    params.require(:candidate).permit(:character, :culture, :picture_url)
   end
 
   def render_errors

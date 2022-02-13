@@ -51,7 +51,7 @@ class CandidatesController < ApplicationController
   end
 
   def candidate_params
-    params.require(:candidate).permit(:name, :address)
+    params.require(:candidate).permit(:character, :culture, :picture_url)
   end
 
   def render_errors
