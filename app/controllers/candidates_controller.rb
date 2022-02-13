@@ -1,7 +1,7 @@
 class CandidatesController < ApplicationController
   include Pundit
   acts_as_token_authentication_handler_for User, except: [ :index, :show ]
-  before_action :set_candidate, only: [:show, :update, :destroy]
+  before_action :set_candidate, only: [ :show, :update, :destroy ]
 
   after_action :verify_authorized, except: :index
   after_action :verify_policy_scoped, only: :index
